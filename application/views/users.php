@@ -9,20 +9,12 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>1</td>
-            <td>Bharath</td>
-            <td>Bharath@gmail.com</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Karthik</td>
-            <td>Karthik@gmail.com</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Sandeep</td>
-            <td>Sandeep@gmail.com</td>
-        </tr>
-    </tbody>
+            <?php foreach ($users as $user): ?>
+            <tr>
+                <td><?php echo $user['_id']; ?></td>
+                <td><?php echo $user['name']; ?></td>
+                <td><?php echo $user['email']; ?></td>
+            </tr>
+            <?php endforeach; ?>
+        </tbody>
 </table>
